@@ -3,32 +3,39 @@
 <head>
   <meta charset="utf-8">
   <title>Glaccy</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="logo-container">
-      <img src="#" alt="GlaccyShop">
+  <header class="main-header container">
+    <div class="main-header-container">
+      <div class="logo-container">
+        <img src="./img/Logo.svg" alt="GlaccyShop">
+      </div>
+      <nav class="main-nav">
+        <ul class="site-navigation">
+          <li class="nav-catalog">
+            <a href="#">Каталог</a>
+          </li>
+          <li class="nav-shipping_payment"><a href="#">Доставка и оплата</a></li>
+          <li class="nav-about_company"><a href="#">О компании</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li class="user-navigation_search"><a href="#">Поиск</a></li>
+          <li class="user-navigation_login-link"><a href="#">Вход</a></li>
+          <li class="user-navigation_basket"><a href="#">Корзина</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="main-nav">
-      <ul class="site-navigation">
-        <li class="nav-catalog"><a href="#">Каталог</a></li>
-        <li class="nav-shipping_payment"><a href="#">Доставка и оплата</a></li>
-        <li class="nav-about_company"><a href="#">О компании</a></li>
-      </ul>
-      <ul class="user-navigation">
-        <li class="search"><a href="#"></a></li>
-        <li class="login-link"><a href="#">Вход</a></li>
-        <li class="basket"><a href="#"></a></li>
-      </ul>
-    </nav>
-    <section>
-      <span class="header-timetable">С 10 до 20, ежедневно</span>
-      <span class="header-phone">8 812 450-25-25</span>
+    <section class="header-info">
+      <h2 class="visually-hidden">Время работы и телефоны</h2>
+      <p class="header-timetable">С 10 до 20, ежедневно<br>
+        <span class="header-phone"> 812 450-25-25</span>
+      </p>
     </section>
   </header>
 
-  <main>
+  <main class="container">
     <ul class="breadcrumbs">
       <li>
         <a href="#">Главная</a>
@@ -40,20 +47,20 @@
         <a>Сливочное</a>
       </li>
     </ul>
-    <h1>Сливочное мороженое</h1>
-    <form>
-      <div>
+    <h1 class="visually-hidden">Сливочное мороженое</h1>
+    <form class="filter">
+      <div class="popular-filter">
         <label for="popular">Сортировка:</label>
         <select id="popular" name="popular">
           <option value="popular">По популярности</option>
         </select>
       </div>
-      <div>
+      <div class="price-filter">
         <label for="price">Цена:100-500 руб.</label>
         <input type="range" id="price" min="100" max="500">
       </div>
       <div>
-        <fieldset>
+        <fieldset class="fat-filter">
           <legend>Жирность:</legend>
           <ul class="fat-list">
             <li class="fat-item">
@@ -76,33 +83,33 @@
         </fieldset>
       </div>
       <div>
-        <fieldset>
+        <fieldset class="filling-filter">
           <legend>Наполнители:</legend>
           <ul class="filling-list">
-            <li>
+            <li class="filling-item">
               <label for="chocolate">шоколадные</label>
               <input type="checkbox" id="chocolate" name="filling" checked>
             </li>
-            <li>
+            <li class="filling-item">
               <label for="sugar-powder">сахарные присыпки</label>
               <input type="checkbox" id="sugar-powder" name="filling" checked>
             </li>
-            <li>
+            <li class="filling-item">
               <label for="fruits">фрукты</label>
               <input type="checkbox" id="fruits" name="filling" checked>
             </li>
-            <li>
+            <li class="filling-item">
               <label for="syrup">сиропы</label>
               <input type="checkbox" id="syrup" name="filling" checked>
             </li>
-            <li>
+            <li class="filling-item">
               <label for="jam">джемы</label>
               <input type="checkbox" id="jam" name="filling" checked>
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Применить</button>
       </div>
+      <button type="submit">Применить</button>
     </form>
 
       <div class="icecream-list">
@@ -171,7 +178,7 @@
       <div class="paginator">
         <ul>
           <li>
-            <a href="#">previous</a>
+            <a href="#">&lt;</a>
           </li>
           <li>
             <a href="#">1</a>
@@ -189,19 +196,20 @@
             <a href="#">5</a>
           </li>
           <li>
-            <a href="#">next</a>
+            <a href="#">&gt;</a>
           </li>
         </ul>
       </div>
   </main>
 
-  <footer>
+  <footer class="main-footer container">
     <section class="footer-social">
       <ul>
-        <li class="social-button"><a href="#">Твиттер</a></li>
-        <li class="social-button"><a href="#">Инстаграм</a></li>
-        <li class="social-button"><a href="#">Фейсбук</a></li>
-        <li class="social-button"><a href="#">Вконтакте</a></li>
+        <h2 class="visually-hidden">Мы в социальных сетях</h3>
+        <li class="social-button"><a href="#">Тв</a></li>
+        <li class="social-button"><a href="#">Ин</a></li>
+        <li class="social-button"><a href="#">Фб</a></li>
+        <li class="social-button"><a href="#">Вк</a></li>
       </ul>
     </section>
     <section class="footer-info">
@@ -220,7 +228,7 @@
         </li>
       </ul>
     </section>
-    <section class="footer-htmlacademy">
+    <section class="footer-copyright">
       <img src="" alt="HTML Academy">
       <p>Сделано в <a href="#">HTML Academy 2017</a>
       </p>
